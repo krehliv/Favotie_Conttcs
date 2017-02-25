@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Favotie_Conttcs</string>
+    <string name="contact_izaiah">Izaiah - (218) 290-3397</string>
+    <string name="contact_matt">Matt - (347) 733-3607</string>
+    <string name="contact_jack">Jack - (746) 656-9317</string>
+    <string name="text_hi">Hi</string>
+    <string name="text_omw">On My Way</string>
+    <string name="text_bye">Goodbye</string>
+    <string name="text_ok">OK!</string>
+    <string name="text_lol">Haha!</string>
+
+    <string-array
+        name="contacts_array">
+        <item>@string/contact_izaiah</item>
+        <item>@string/contact_matt</item>
+        <item>@string/contact_jack</item>
+    </string-array>
+    <string-array
+        name="message_array">
+        <item>@string/text_hi</item>
+        <item>@string/text_omw</item>
+        <item>@string/text_bye</item>
+        <item>@string/text_ok</item>
+        <item>@string/text_lol</item>
+    </string-array>
+</resources>
