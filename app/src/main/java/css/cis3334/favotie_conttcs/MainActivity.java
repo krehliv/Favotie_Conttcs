@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner messageSpinner;
     TextView textViewStatus;
     String messageSelection = "ERROR_SENDING_MESSAGE";
+    String phone = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String[] contactsArray = getResources().getStringArray(R.array.contacts_array);
+        String[] messageArray = getResources().getStringArray(R.array.message_array);
 
         textViewStatus = (TextView) findViewById(R.id.textViewStatus);
         setupButtonClickEvents();
@@ -35,22 +37,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupButtonClickEvents() {
 
+        final String[] numberArray = getResources().getStringArray(R.array.number_array);
+
         btn1Call = (Button) findViewById(R.id.button1Call);
         btn1Call.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                phone = numberArray[0];
                 textViewStatus.setText("Call 1");
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0377778888"));
-                startActivity(callIntent);
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+phone));
+                if (callIntent.resolveActivity(getPackageManager()) != null)
+                    startActivity(callIntent);
             }
         });
 
         btn2Call = (Button) findViewById(R.id.button2Call);
         btn2Call.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                phone = numberArray[1];
                 textViewStatus.setText("Call 2");
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0371178118"));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+phone));
                 startActivity(callIntent);
             }
         });
@@ -58,14 +65,14 @@ public class MainActivity extends AppCompatActivity {
         btn3Call = (Button) findViewById(R.id.button3Call);
         btn3Call.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                phone = numberArray[2];
                 textViewStatus.setText("Call 3");
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0377008800"));
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:"+phone));
                 startActivity(callIntent);
             }
         });
 
-        String[] messages = getResources().getStringArray(R.array.message_array);
         Spinner messageSpinner = (Spinner) findViewById(R.id.spinnerMessage);
         messageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -74,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        btn1Text = (Button) findViewById(R.id.buttonTextHi1);
+        btn1Text = (Button) findViewById(R.id.buttonText1);
         btn1Text.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
                 textViewStatus.setText("Text 1");
@@ -85,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn2Text = (Button) findViewById(R.id.buttonTextHi2);
+        btn2Text = (Button) findViewById(R.id.buttonText2);
         btn2Text.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
                 textViewStatus.setText("Text 2");
@@ -96,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn3Text = (Button) findViewById(R.id.buttonTextHi3);
+        btn3Text = (Button) findViewById(R.id.buttonText3);
         btn3Text.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
                 textViewStatus.setText("Text 3");

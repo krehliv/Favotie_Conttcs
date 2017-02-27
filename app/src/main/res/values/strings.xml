@@ -1,13 +1,19 @@
 <resources>
     <string name="app_name">Favotie_Conttcs</string>
     <string name="contact_izaiah">Izaiah - (218) 290-3397</string>
-    <string name="contact_matt">Matt - (347) 733-3607</string>
-    <string name="contact_jack">Jack - (746) 656-9317</string>
+    <string name="contact_matt">Matt - (037) 117-8118</string>
+    <string name="contact_jack">Jack - (037) 700-8800</string>
     <string name="text_hi">Hi</string>
     <string name="text_omw">On My Way</string>
     <string name="text_bye">Goodbye</string>
     <string name="text_ok">OK!</string>
     <string name="text_lol">Haha!</string>
+    <string name="call">Call</string>
+    <string name="contacts">Contacts</string>
+    <string name="text">Text</string>
+    <string name="number1">2182903397</string>
+    <string name="number2">0371178118</string>
+    <string name="number3">0377008800</string>
 
     <string-array
         name="contacts_array">
@@ -22,5 +28,11 @@
         <item>@string/text_bye</item>
         <item>@string/text_ok</item>
         <item>@string/text_lol</item>
+    </string-array>
+    <string-array
+        name="number_array">
+        <item>@string/number1</item>
+        <item>@string/number2</item>
+        <item>@string/number3</item>
     </string-array>
 </resources>

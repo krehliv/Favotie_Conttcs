@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contacts"
+        android:text="@string/contacts"
         android:textSize="18sp"
         android:textAlignment="center" />
 
@@ -30,7 +30,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            tools:ignore="InefficientWeight" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,18 +40,20 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="Call"
+            android:text="@string/call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button1Call"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
         <Button
-            android:text="Text Hi"
+            android:text="@string/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonTextHi1"
-            android:layout_weight="1" />
+            android:id="@+id/buttonText1"
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 
@@ -65,7 +68,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            tools:ignore="InefficientWeight" />
 
     </LinearLayout>
 
@@ -79,14 +83,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button2Call"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
         <Button
-            android:text="Text Hi"
+            android:text="Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonTextHi2"
-            android:layout_weight="1" />
+            android:id="@+id/buttonText2"
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 
@@ -101,7 +107,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
             android:layout_weight="1"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            tools:ignore="InefficientWeight" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,14 +121,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button3Call"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
         <Button
-            android:text="Text Hi"
+            android:text="Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonTextHi3"
-            android:layout_weight="1" />
+            android:id="@+id/buttonText3"
+            android:layout_weight="1"
+            tools:ignore="ButtonStyle" />
 
     </LinearLayout>
 
