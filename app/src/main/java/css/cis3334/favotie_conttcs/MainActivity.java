@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 textViewStatus.setText("Call 2");
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:"+phone));
-                startActivity(callIntent);
+                if (callIntent.resolveActivity(getPackageManager()) != null)
+                    startActivity(callIntent);
             }
         });
 
@@ -69,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 textViewStatus.setText("Call 3");
                 Intent callIntent = new Intent(Intent.ACTION_DIAL);
                 callIntent.setData(Uri.parse("tel:"+phone));
-                startActivity(callIntent);
+                if (callIntent.resolveActivity(getPackageManager()) != null)
+                    startActivity(callIntent);
             }
         });
 
